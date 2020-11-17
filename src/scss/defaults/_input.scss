@@ -1,0 +1,31 @@
+$_input-height: 46px;
+
+%input {
+  position: relative;
+  width: 100%;
+  height: auto;
+  // margin-bottom: rem($spacing-s);
+  // padding: rem($spacing-xs) rem($spacing-s);
+  padding: rem($spacing-xs) rem($spacing-s);
+  // background-color: theme-color(light);
+  background-color: white;
+  // border: border-width solid gray-color(200);
+  border: $border-width solid lightgray;
+  border-radius: $border-radius;
+}
+
+[type='email'],
+[type='text'],
+[type='textarea'],
+[type='password'],
+[type='date'],
+input,
+textarea,
+select,
+.ng-input > input {
+  @extend %input;
+}
+
+[disabled] {
+  background-color: #f0f4f5;
+}

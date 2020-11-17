@@ -1,0 +1,25 @@
+<div class="row completed-task">
+  <div class="col-4 d-flex align-items-center">{{ task.title }}</div>
+  <div class="col-4 d-flex justify-content-between align-items-center">
+    <div class="project-name d-flex align-items-center">
+      {{ task.project.name }}
+    </div>
+    <button
+      class="button start-button pointer ml-3"
+      (click)="continueTaskTimer()"
+    >
+      Start
+    </button>
+  </div>
+
+  <div class="col-4 d-flex justify-content-end">
+    <div class="spent-time d-flex align-items-center mr-5">
+      {{ secondsSpend | formalTime }}
+    </div>
+    <div class="time-range d-flex justify-content-between align-items-center">
+      <span>{{ task.startedAt | date: 'HH:mm' }}</span>
+      <span>-</span>
+      <span>{{ task.endedAt | date: 'HH:mm' }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.timer-bar-container {
+  border-radius: 5px;
+  background-color: #f0f4f5;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.time-value {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #f0f4f5;
+}
+
+.time-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &--start {
+    background-color: #71d9aa;
+  }
+
+  &--stop {
+    background-color: #f79b94;
+  }
+}

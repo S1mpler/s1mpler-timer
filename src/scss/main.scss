@@ -1,0 +1,17 @@
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap';
+@import 'essentials';
+
+// Import config styles
+@import 'config/base';
+
+// Import functions
+@import 'functions/img-path';
+
+// Import default styles
+@import 'defaults/input';
+
+// Import components
+@import 'components/button';
+@import 'components/ng-select';
+@import 'components/icon';

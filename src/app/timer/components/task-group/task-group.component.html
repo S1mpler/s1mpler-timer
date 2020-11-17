@@ -1,0 +1,16 @@
+<div class="task-group">
+  <h1 class="task-group__title mb-3">
+    {{ isToday ? 'Today' : (group.date | date: 'EEE, d MMM') }}
+  </h1>
+
+  <hr />
+
+  <div class="task-group__task-list">
+    <app-completed-task
+      class="task-group__task-item"
+      *ngFor="let task of group.tasks"
+      [task]="task"
+      (resumeTask)="continueTaskTimer($event)"
+    ></app-completed-task>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.button {
+  min-width: rem(170px);
+  padding: $spacing-xs $spacing-s;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: rem($border-radius);
+  background-color: white;
+
+  &[disabled] {
+    background-color: #f0f4f5;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,43 @@
+<div class="timer-bar-container row py-5">
+  <div class="col-12 col-md-4 mb-3 mb-md-0">
+    <input
+      type="text"
+      placeholder="What are you working on?"
+      [(ngModel)]="taskData.title"
+      [disabled]="isTimerOn"
+    />
+  </div>
+  <div class="col-12 col-md-4 mb-3 mb-md-0">
+    <ng-select
+      class="ng-select"
+      [(ngModel)]="selectedProjectId"
+      placeholder="Select a project"
+      [disabled]="isTimerOn"
+    >
+      <ng-option *ngFor="let project of projects" [value]="project.id">{{
+        project.name
+      }}</ng-option>
+    </ng-select>
+  </div>
+  <div class="col-12 col-md-4 d-flex">
+    <div class="text-right time-value" type="text">
+      {{ timerService.timer$ | async | time }}
+    </div>
+
+    <button
+      class="button time-button time-button--stop"
+      *ngIf="isTimerOn"
+      (click)="stopTimer()"
+    >
+      Stop
+    </button>
+    <button
+      class="button time-button time-button--start"
+      *ngIf="!isTimerOn"
+      (click)="startTimer()"
+      [disabled]="selectedProjectId === null"
+    >
+      Start
+    </button>
+  </div>
+</div>
