@@ -1,5 +1,9 @@
 # S1mplerTimer
 
+## Run project
+Install dependencies: `npm install`
+Run project: `ng serve`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
 
 ## Development server
